@@ -1,0 +1,71 @@
+$primary: #f16827;
+$second: #1f2638;
+$thirdly: #ecf0f1;
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: $second;
+  color: $thirdly;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // DM Sans, 700
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+
+  &::before {
+    margin-right: 1rem;
+    color: $primary;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1::before {
+  content: '#';
+}
+
+h2::before {
+  content: '##';
+}
+
+h3::before {
+  content: '###';
+}
+
+code,
+pre,
+footer,
+header {
+  font-family: 'DM Mono', monospace;
+}
+
+a {
+  color: $thirdly;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 0.15rem solid $primary;
+  transition: 150ms ease-in-out background-color, 150ms ease-in-out color;
+
+  &:hover {
+    background-color: $primary;
+    color: $second;
+  }
+}
+
+footer,
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
