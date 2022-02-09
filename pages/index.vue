@@ -40,7 +40,7 @@
       <li>
         Write me an E-Mail to
         <a href="mailto:hello@m4rc3l.de"><code>hello@m4rc3l.de</code></a
-        >,
+        > (if you want, also encrypted),
       </li>
       <li>
         join the
@@ -53,6 +53,13 @@
         or if you know my Matrix Tag, you are very welcome to contact me on
         Matrix.
       </li>
+    </ul>
+    <p>
+      My Keys:
+    </p>
+    <ul>
+      <li><b>SSH</b> - <a href="/id_ed25519.pub"><code>id_ed25519.pub</code></a></li>
+      <li><b>PGP</b> - <a href="/0x227D09E1.asc"><code>0x227D09E1.asc</code></a> (<code>hello@m4rc3l.de</code>)</li>
     </ul>
   </article>
 </template>
