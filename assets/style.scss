@@ -30,16 +30,28 @@ strong {
   font-weight: 700;
 }
 
-h1::before {
-  content: '#';
+h1 {
+  font-size: 2rem;
+
+  &::before {
+    content: '#';
+  }
 }
 
-h2::before {
-  content: '##';
+h2 {
+  font-size: 1.5rem;
+
+  &::before {
+    content: '##';
+  }
 }
 
-h3::before {
-  content: '###';
+h3 {
+  font-size: 1.2rem;
+
+  &::before {
+    content: '###';
+  }
 }
 
 code,
@@ -68,4 +80,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-content: center;
+}
+
+.primary {
+  color: $primary;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+
+  > li:before {
+    display: inline-block;
+    content: '-';
+    font-weight: 700;
+    color: $primary;
+    margin-left: -1rem;
+    width: 1rem;
+  }
 }
