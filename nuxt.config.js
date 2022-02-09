@@ -1,3 +1,5 @@
+import pkg from './package.json'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -57,6 +59,22 @@ export default {
       lang: 'en',
     },
     icon: {},
+    meta: {
+      name: pkg.name,
+      autor: pkg.author,
+      description: pkg.description,
+      theme_color: '#1f2638',
+      ogHost: 'https://m4rc3l.de',
+      ogImage: {
+        path: '/avatar.png',
+        width: '512px',
+        height: '512px',
+        type: 'image/png',
+      },
+      twitterCard: 'summary',
+      twitterSite: '@MarcelCoding',
+      twitterCreator: '@MarcelCoding',
+    },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
