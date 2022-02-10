@@ -64,6 +64,11 @@
         <a href="/0x227D09E1.asc"><code>0x227D09E1.asc</code></a>
         (<code>hello@m4rc3l.de</code>)
       </li>
+      <li>
+        <b>PGP</b> -
+        <a href="/0xFAA965D4.asc"><code>0xFAA965D4.asc</code></a>
+        (<code>security@m4rc3l.de</code>)
+      </li>
     </ul>
   </article>
 </template>
