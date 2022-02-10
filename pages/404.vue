@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <article>
     <h1>Error 404</h1>
     <p>
       You know what this means...<br />Why not try to start from
@@ -15,5 +15,5 @@
      |//YY \|/
      |||   |||</pre
     >
-  </div>
+  </article>
 </template>
