@@ -2,12 +2,32 @@ $primary: #f16827;
 $second: #1f2638;
 $thirdly: #ecf0f1;
 
+* {
+  scrollbar-color: $primary $second;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 1rem;
+  }
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: $second;
   color: $thirdly;
   line-height: 1.4;
   margin: 0;
+}
+
+::selection {
+  background-color: $primary;
+  color: $second;
 }
 
 h1,
