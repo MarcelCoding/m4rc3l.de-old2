@@ -4,7 +4,7 @@
 
     <p>
       Hi, my name is
-      <nuxt-img src="/icon.png" alt="(Avatar)" />
+      <nuxt-img src="/avatar.png" alt="" title="Avatar" />
       Marcel. This is my website where you can find my personal profile and my
       blog.
     </p>
@@ -84,5 +84,6 @@ img {
   width: 1rem;
   height: 1rem;
   margin-bottom: -0.15rem;
+  border-radius: 50%;
 }
 </style>
