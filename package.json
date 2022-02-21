@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@fontsource/dm-mono": "^4.5.3",
-    "@fontsource/dm-sans": "^4.5.1",
+    "@fontsource/dm-sans": "^4.5.2",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sentry": "^5.1.7",
