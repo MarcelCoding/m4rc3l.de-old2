@@ -1,2 +1,3 @@
 User-Agent: *
 Allow: /
+Sitemap: https://m4rc3l.de/sitemap.xml
