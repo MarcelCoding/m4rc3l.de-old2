@@ -20,6 +20,7 @@
     "@fontsource/dm-sans": "^4.5.2",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sentry": "^5.1.7",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.21.1",

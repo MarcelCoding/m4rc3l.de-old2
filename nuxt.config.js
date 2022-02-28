@@ -40,7 +40,8 @@ export default {
     "@nuxt/typescript-build",
     // https://go.nuxtjs.dev/stylelint
     "@nuxtjs/stylelint-module",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxtjs/robots"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -77,6 +78,12 @@ export default {
     }
   },
 
+  robots: {
+    UserAgent: "*",
+    Disallow: "/",
+    Sitemap: "https://m4rc3l.de/sitemap.xml"
+  },
+
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
     markdown: {
@@ -88,7 +95,16 @@ export default {
 
   sitemap: {
     hostname: "https://m4rc3l.de/",
-    gzip: true
+    gzip: true,
+    routes: async () => {
+      const routes = [];
+      const { $content } = require("@nuxt/content");
+      const posts = await $content("articles").fetch();
+      for (const post of posts) {
+        routes.push(`blog/${post.slug}`);
+      }
+      return routes;
+    }
   },
 
   generate: {

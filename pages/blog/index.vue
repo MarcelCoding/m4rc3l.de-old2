@@ -10,13 +10,15 @@
   </article>
 </template>
 
-<script>
+<script lang="ts">
+import type { Context } from "@nuxt/types";
+
 export default {
-  async asyncData({ $content }) {
+  async asyncData({ $content }: Context) {
     const articles = await $content("articles")
-    .only(["title", "description", "img", "slug", "author"])
-    .sortBy("createdAt", "asc")
-    .fetch();
+      .only(["title", "description", "slug"])
+      .sortBy("createdAt", "asc")
+      .fetch();
 
     return {
       articles
