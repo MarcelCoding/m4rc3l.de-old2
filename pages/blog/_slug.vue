@@ -12,36 +12,46 @@
     <!--      </ul>-->
     <!--    </nav>-->
     <NuxtContent :document="article" />
-    <p>Spot an error? Go ahead and create a <a
-      :href="'https://github.com/MarcelCoding/m4rc3l.de/edit/main/content/articles/'+article.slug+'.md'">Pull
-      Request</a> on
-      GitHub.</p>
+    <p>
+      Spot an error? Go ahead and create a
+      <a
+        :href="
+          'https://github.com/MarcelCoding/m4rc3l.de/edit/main/content/articles/' +
+          article.slug +
+          '.md'
+        "
+        >Pull Request</a
+      >
+      on GitHub.
+    </p>
   </article>
 </template>
 
 <script lang="ts">
-import type { Context } from "@nuxt/types";
+import type { Context } from '@nuxt/types'
 
 interface Body {
-  children?: Body[];
-  value?: string;
+  children?: Body[]
+  value?: string
 }
 
 interface Article {
-  slug: string;
-  title: string;
-  description: string;
-  updatedAt: string;
-  body: Body;
+  slug: string
+  title: string
+  description: string
+  updatedAt: string
+  body: Body
 }
 
 export default {
-  async asyncData({ $content, params }: Context): Promise<{ article: Article }> {
-    const article = await $content("articles", params.slug)
-      .fetch();
+  async asyncData({
+    $content,
+    params,
+  }: Context): Promise<{ article: Article }> {
+    const article = await $content('articles', params.slug).fetch()
 
     // @ts-expect-error
-    return { article };
+    return { article }
   },
   head(): object {
     return {
@@ -49,71 +59,75 @@ export default {
       title: `${this.article.title} - m4rc3l.de`,
       meta: [
         {
-          hid: "og:title",
-          name: "og:title",
+          hid: 'og:title',
+          name: 'og:title',
           // @ts-expect-error
-          content: `${this.article.title} - m4rc3l.de`
+          content: `${this.article.title} - m4rc3l.de`,
         },
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           // @ts-expect-error
-          content: this.article.description
+          content: this.article.description,
         },
         {
-          hid: "og:description",
-          name: "og:description",
+          hid: 'og:description',
+          name: 'og:description',
           // @ts-expect-error
-          content: this.article.description
+          content: this.article.description,
         },
         {
-          hid: "keywords",
-          name: "keywords",
+          hid: 'keywords',
+          name: 'keywords',
           // @ts-expect-error
-          content: this.generateKeywords(`${this.article.title} ${this.article.description} ${this.search(this.article.body)}`)
-        }
-      ]
-    };
+          content: this.generateKeywords(
+            `${this.article.title} ${this.article.description} ${this.search(
+              this.article.body
+            )}`
+          ),
+        },
+      ],
+    }
   },
   methods: {
     formatDate(date: string | number | Date) {
-      return new Date(date).toLocaleDateString("en", {
-        year: "numeric", month: "long", day: "numeric"
-      });
+      return new Date(date).toLocaleDateString('en', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
     },
     generateKeywords(data: string) {
-      const words: { [word: string]: number } = {};
+      const words: { [word: string]: number } = {}
 
-      data?.replace(/[,.<>":=/\n\r()]/g, " ")
-        .split(" ")
-        .map(value => value.trim().toLowerCase())
-        .filter(value => value.length > 4)
-        .forEach(value => {
+      data
+        ?.replace(/[,.<>":=/\n\r()]/g, ' ')
+        .split(' ')
+        .map((value) => value.trim().toLowerCase())
+        .filter((value) => value.length > 4)
+        .forEach((value) => {
           if (words[value]) {
-            words[value]++;
+            words[value]++
+          } else {
+            words[value] = 1
           }
-          else {
-            words[value] = 1;
-          }
-        });
+        })
 
       return Object.entries(words)
         .sort(([, a], [, b]) => b - a)
         .slice(0, 15)
         .map(([x]) => x)
-        .join(", ");
+        .join(', ')
     },
     search(value: Body): string {
       if (value.children) {
-        return value.children.map(this.search).join(" ");
+        return value.children.map(this.search).join(' ')
+      } else if (value.value) {
+        return value.value
+      } else {
+        return ''
       }
-      else if (value.value) {
-        return value.value;
-      }
-      else {
-        return "";
-      }
-    }
-  }
-};
+    },
+  },
+}
 </script>

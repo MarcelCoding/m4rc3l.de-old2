@@ -4,7 +4,7 @@
 
     <p>
       Hi, my name is
-      <NuxtImg src="/avatar.png" alt="" title="Avatar" />
+      <NuxtImg alt="" src="/avatar.png" title="Avatar" />
       Marcel. This is my website where you can find my personal profile and my
       blog.
     </p>
@@ -49,7 +49,7 @@
         </li>
         <li>
           join the
-          <a target="_blank" href="https://the-morpheus.de/discord"
+          <a href="https://the-morpheus.de/discord" target="_blank"
             >The Morpheus Discord</a
           >
           Server and write an private message to <code>@Marcel#3615</code>,
@@ -79,7 +79,7 @@
   </article>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 img {
   width: 1rem;
   height: 1rem;

@@ -44,16 +44,15 @@ or build it using docker-compose like this:
 
 ```yaml
 # docker-compose.yaml
-version: "3.9"
+version: '3.9'
 
 services:
-
   keycloak:
     image: local/keycloak:17.0.0
     build:
       context: .
       args:
-        - "KEYCLOAK_VERSION=17.0.0"
+        - 'KEYCLOAK_VERSION=17.0.0'
 ```
 
 and the following command:
@@ -82,7 +81,7 @@ KC_PROXY=edge
 ```
 
 `KC_PROXY` tells Keycloak to respect `X-Forwared`-headers and start without the configuration of certificates. Keycloak
-has a nice list of all configuration parameters, that are all available either as a command-line argument or as an 
+has a nice list of all configuration parameters, that are all available either as a command-line argument or as an
 environment variable: [keycloak.org/server/all-config](https://www.keycloak.org/server/all-config) All options that have
 a wrench in the last column need to be specified at build time (in the `Dockerfile`) al other are runtime configuration
 options (for the `.env`).
@@ -95,10 +94,9 @@ You `docker-compose.yaml` should look like this:
 
 ```yaml
 # docker-compose.yaml
-version: "3.9"
+version: '3.9'
 
 services:
-
   keycloak:
     command: start
 ```

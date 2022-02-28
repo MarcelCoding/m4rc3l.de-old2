@@ -3,7 +3,9 @@
     <h1>Blog</h1>
     <ul>
       <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{ article.title }}</NuxtLink>
+        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">{{
+          article.title
+        }}</NuxtLink>
         - {{ article.description }}
       </li>
     </ul>
@@ -11,18 +13,18 @@
 </template>
 
 <script lang="ts">
-import type { Context } from "@nuxt/types";
+import type { Context } from '@nuxt/types'
 
 export default {
   async asyncData({ $content }: Context) {
-    const articles = await $content("articles")
-      .only(["title", "description", "slug"])
-      .sortBy("createdAt", "asc")
-      .fetch();
+    const articles = await $content('articles')
+      .only(['title', 'description', 'slug'])
+      .sortBy('createdAt', 'asc')
+      .fetch()
 
     return {
-      articles
-    };
-  }
-};
+      articles,
+    }
+  },
+}
 </script>
