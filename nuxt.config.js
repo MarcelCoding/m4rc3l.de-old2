@@ -80,7 +80,7 @@ export default {
 
   robots: {
     UserAgent: '*',
-    Disallow: '/',
+    Allow: '/',
     Sitemap: 'https://m4rc3l.de/sitemap.xml',
   },
 
