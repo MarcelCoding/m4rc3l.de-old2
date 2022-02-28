@@ -81,7 +81,9 @@ export default {
           name: 'keywords',
           // @ts-expect-error
           content: this.generateKeywords(
+            // @ts-expect-error
             `${this.article.title} ${this.article.description} ${this.search(
+              // @ts-expect-error
               this.article.body
             )}`
           ),

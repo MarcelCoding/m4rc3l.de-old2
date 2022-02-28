@@ -41,7 +41,6 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxt/image',
-    '@nuxtjs/robots',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -76,12 +75,6 @@ export default {
       twitterSite: '@MarcelCoding',
       twitterCreator: '@MarcelCoding',
     },
-  },
-
-  robots: {
-    UserAgent: '*',
-    Allow: '/',
-    Sitemap: 'https://m4rc3l.de/sitemap.xml',
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
