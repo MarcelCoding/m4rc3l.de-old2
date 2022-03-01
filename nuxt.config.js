@@ -102,6 +102,7 @@ export default {
 
   generate: {
     fallback: '404.html',
+    subFolders: false,
   },
 
   router: {
@@ -109,11 +110,15 @@ export default {
       routes.push({
         name: 'custom',
         path: '*',
-        component: resolve(__dirname, 'pages/404.vue'),
+        component: resolve(__dirname, 'errors/404.vue'),
       })
     },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    html: {
+      minify: true,
+    },
+  },
 }
