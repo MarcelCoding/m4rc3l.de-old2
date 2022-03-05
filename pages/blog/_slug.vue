@@ -2,7 +2,7 @@
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <p>Last updated in {{ formatDate(article.updatedAt) }}.</p>
+    <p>Last updated on {{ formatDate(article.updatedAt) }}.</p>
     <!--    <h2>Table of Contents</h2>-->
     <!--    <nav>-->
     <!--      <ul>-->
@@ -23,6 +23,11 @@
         >Pull Request</a
       >
       on GitHub.
+    </p>
+    <p>
+      Feeds are available as
+      <a href="/blog.rss">blog.rss</a>, <a href="/blog.atom">blog.atom</a> or
+      <a href="/blog.json">blog.json</a>.
     </p>
   </article>
 </template>
@@ -48,7 +53,9 @@ export default {
     $content,
     params,
   }: Context): Promise<{ article: Article }> {
-    const article = await $content('articles', params.slug).fetch()
+    const article = await $content('articles', params.slug)
+      .without('feedHtml')
+      .fetch()
 
     // @ts-expect-error
     return { article }

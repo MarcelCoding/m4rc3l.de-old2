@@ -47,10 +47,18 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      'nuxt-content-body-html',
+      {
+        fieldName: 'feedHtml',
+        highlighter: undefined,
+      },
+    ],
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/sentry',
+    '@nuxtjs/feed',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -100,6 +108,24 @@ export default {
     },
   },
 
+  feed: [
+    {
+      create: generateFeed,
+      path: '/blog.rss',
+      type: 'rss2',
+    },
+    {
+      create: generateFeed,
+      path: '/blog.atom',
+      type: 'atom1',
+    },
+    {
+      create: generateFeed,
+      path: '/blog.json',
+      type: 'json1',
+    },
+  ],
+
   generate: {
     fallback: '404.html',
     subFolders: false,
@@ -121,4 +147,28 @@ export default {
       minify: true,
     },
   },
+}
+
+async function generateFeed(feed) {
+  const { $content } = require('@nuxt/content')
+
+  feed.options = {
+    title: 'Blog - m4rc3l.de',
+    link: 'https://m4rc3l.de/blog',
+    description: pkg.description,
+  }
+
+  const posts = await $content('articles').sortBy('createdAt', 'desc').fetch()
+
+  posts.forEach((post) => {
+    const url = `https://m4rc3l.de/blog/${post.slug}`
+    feed.addItem({
+      content: `${post.feedHtml}<p>Spot an error? Go ahead and create a<a href="https://github.com/MarcelCoding/m4rc3l.de/edit/main/content/articles/${post.slug}.md">Pull Request</a>on GitHub.</p>`,
+      date: new Date(post.createdAt),
+      description: post.description,
+      id: url,
+      link: url,
+      title: post.title,
+    })
+  })
 }
