@@ -1,6 +1,7 @@
 {
   "name": "m4rc3l.de",
   "version": "1.0.0",
+  "packageManager": "pnpm@6",
   "private": true,
   "author": "Marcel <https://github.com/MarcelCoding>",
   "description": "Hi, my name is Marcel. This is my website where you can find my personal profile and my blog.",
@@ -21,6 +22,7 @@
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
+    "consola": "^2.15.3",
     "core-js": "^3.21.1",
     "nuxt": "^2.15.8",
     "nuxt-content-body-html": "^1.1.3",
@@ -30,6 +32,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.16.3",
     "@nuxt/image": "^0.5.0",
     "@nuxt/types": "^2.15.8",
@@ -41,6 +44,7 @@
     "@nuxtjs/stylelint-module": "^4.1.0",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "*",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.5.0",
     "postcss-html": "^1.3.0",
@@ -51,6 +55,7 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-vue": "^1.3.0",
     "stylelint-config-standard": "^25.0.0",
+    "typescript": "4.5",
     "webpack": "^4.46.0"
   }
 }

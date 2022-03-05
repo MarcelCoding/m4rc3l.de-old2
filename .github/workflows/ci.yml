@@ -6,59 +6,34 @@ on:
   pull_request:
     branches: [main]
 
-env:
-  NODE_VERSION: 16
-
 jobs:
   lint:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.1
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit
-
-      - name: Lint
-        run: npm run lint
+      - run: pnpm install
+      - run: pnpm run lint
 
   build:
     needs: [lint]
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.1
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit
-
-      - name: Build
-        run: npm run generate
+      - run: pnpm install
+      - run: pnpm run generate
