@@ -163,7 +163,7 @@ async function generateFeed(feed) {
   posts.forEach((post) => {
     const url = `https://m4rc3l.de/blog/${post.slug}`
     feed.addItem({
-      content: `${post.feedHtml}<p>Spot an error? Go ahead and create a<a href="https://github.com/MarcelCoding/m4rc3l.de/edit/main/content/articles/${post.slug}.md">Pull Request</a>on GitHub.</p>`,
+      content: `${post.feedHtml}<p>Spot an error? Go ahead and create a <a href="https://github.com/MarcelCoding/m4rc3l.de/edit/main/content/articles/${post.slug}.md">Pull Request</a> on GitHub.</p>`,
       date: new Date(post.createdAt),
       description: post.description,
       id: url,
