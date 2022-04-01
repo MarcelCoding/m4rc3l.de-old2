@@ -17,7 +17,7 @@
         <td>95 %</td>
         <td rowspan="3">
           <i
-          >Die Leistungen entsprechen den Anforderungen in besonderem Maße.</i
+            >Die Leistungen entsprechen den Anforderungen in besonderem Maße.</i
           >
         </td>
         <td rowspan="3"></td>
@@ -79,7 +79,7 @@
         <td>50 %</td>
         <td rowspan="2">
           <i
-          >Die Leistungen weisen zwar Mängel auf, entsprechen aber im Ganzen
+            >Die Leistungen weisen zwar Mängel auf, entsprechen aber im Ganzen
             noch den Anforderungen.</i
           >
         </td>
@@ -97,7 +97,7 @@
         <td>39 %</td>
         <td>
           <i
-          >Die Leistungen weisen Mängel auf und entsprechen den Anforderungen
+            >Die Leistungen weisen Mängel auf und entsprechen den Anforderungen
             nur noch mit Einschränkungen.</i
           >
         </td>
@@ -110,7 +110,7 @@
         <td>33 %</td>
         <td rowspan="3">
           <i
-          >Die Leistungen entsprechen den Anforderungen nicht, lassen jedoch
+            >Die Leistungen entsprechen den Anforderungen nicht, lassen jedoch
             erkennen, dass die notwendigen Grundkenntnisse vorhanden sind und
             die Mängel in absehbarer Zeit behoben werden können.</i
           >
@@ -133,7 +133,7 @@
         <td>0 %</td>
         <td>
           <i
-          >Die Leistungen entsprechen den Anforderungen nicht und selbst die
+            >Die Leistungen entsprechen den Anforderungen nicht und selbst die
             Grundkenntnisse sind so lückenhaft, dass die Mängel in absehbarer
             Zeit nicht behoben werden können.</i
           >
@@ -148,14 +148,13 @@
         href="https://de.wikipedia.org/wiki/Vorlage:Punktesystem_der_gymnasialen_Oberstufe"
         rel="norefer"
         target="_blank"
-      >de.wikipedia.org/wiki/Vorlage:Punktesystem_der_gymnasialen_Oberstufe</a
+        >de.wikipedia.org/wiki/Vorlage:Punktesystem_der_gymnasialen_Oberstufe</a
       >
     </p>
   </section>
 </template>
 
 <style scoped lang="scss">
-
 td {
   padding: 0 0.5rem;
   text-align: center;
