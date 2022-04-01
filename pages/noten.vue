@@ -1,114 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Noten</title>
-    <meta content="width=device-width" name="viewport" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        font-family: 'Roboto Mono', monospace;
-      }
-
-      body {
-        background-color: #ecf0f1;
-        color: #000;
-      }
-
-      a {
-        color: #0c2461;
-        border-bottom: 0.3rem solid rgb(93 136 93);
-        text-decoration: none;
-        outline: none;
-        transition: 200ms ease-in-out background-color;
-      }
-
-      a:hover {
-        color: #ecf0f1;
-        background-color: rgb(93 136 93);
-      }
-
-      .green1 {
-        background-color: #beb;
-      }
-
-      .green2 {
-        background-color: #cfc;
-      }
-
-      .yellow1 {
-        background-color: #ffb;
-      }
-
-      .yellow2 {
-        background-color: #fea;
-      }
-
-      .orange {
-        background-color: #fda;
-      }
-
-      .red {
-        background-color: #faa;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #000;
-          color: #ecf0f1;
-        }
-
-        a {
-          color: #ecf0f1;
-        }
-
-        .green1,
-        .green2,
-        .yellow1,
-        .yellow2,
-        .orange,
-        .red {
-          color: #000;
-        }
-
-        .green1 {
-          background-color: rgba(187 238 187 / 75%);
-        }
-
-        .green2 {
-          background-color: rgba(204 255 204 / 75%);
-        }
-
-        .yellow1 {
-          background-color: rgba(255 255 187 / 75%);
-        }
-
-        .yellow2 {
-          background-color: rgba(255 238 170 / 75%);
-        }
-
-        .orange {
-          background-color: rgba(255 221 170 / 75%);
-        }
-
-        .red {
-          background-color: rgba(255 170 170 / 75%);
-        }
-      }
-    </style>
-  </head>
-
-  <body>
+<template>
+  <section>
+    <h1>Noten</h1>
     <table>
       <tr>
         <th>Punkte</th>
-        <th>Note in Worten</th>
-        <th>Note (mit Tendenz)</th>
+        <th>Notewort</th>
+        <th>Note</th>
         <th>Rohpunkte</th>
         <th>Notendefinition</th>
         <th>Bemerkung</th>
@@ -120,9 +17,10 @@
         <td>95 %</td>
         <td rowspan="3">
           <i
-            >Die Leistungen entsprechen den Anforderungen in besonderem Maße.</i
+          >Die Leistungen entsprechen den Anforderungen in besonderem Maße.</i
           >
         </td>
+        <td rowspan="3"></td>
       </tr>
       <tr class="green1">
         <td>14</td>
@@ -142,6 +40,7 @@
         <td rowspan="3">
           <i>Die Leistungen entsprechen den Anforderungen voll.</i>
         </td>
+        <td rowspan="3"></td>
       </tr>
       <tr class="green2">
         <td>11</td>
@@ -161,6 +60,7 @@
         <td rowspan="3">
           <i>Die Leistungen entsprechen den Anforderungen im Allgemeinen.</i>
         </td>
+        <td rowspan="3"></td>
       </tr>
       <tr class="yellow1">
         <td>8</td>
@@ -179,10 +79,11 @@
         <td>50 %</td>
         <td rowspan="2">
           <i
-            >Die Leistungen weisen zwar Mängel auf, entsprechen aber im Ganzen
+          >Die Leistungen weisen zwar Mängel auf, entsprechen aber im Ganzen
             noch den Anforderungen.</i
           >
         </td>
+        <td rowspan="2"></td>
       </tr>
       <tr class="yellow2">
         <td>5</td>
@@ -191,12 +92,12 @@
       </tr>
       <tr class="orange">
         <td>4</td>
-        <td><i>schwach</i> ausreichend<sup>1</sup></td>
+        <td><i>schwach</i> ausreichend</td>
         <td>4−</td>
         <td>39 %</td>
         <td>
           <i
-            >Die Leistungen weisen Mängel auf und entsprechen den Anforderungen
+          >Die Leistungen weisen Mängel auf und entsprechen den Anforderungen
             nur noch mit Einschränkungen.</i
           >
         </td>
@@ -209,7 +110,7 @@
         <td>33 %</td>
         <td rowspan="3">
           <i
-            >Die Leistungen entsprechen den Anforderungen nicht, lassen jedoch
+          >Die Leistungen entsprechen den Anforderungen nicht, lassen jedoch
             erkennen, dass die notwendigen Grundkenntnisse vorhanden sind und
             die Mängel in absehbarer Zeit behoben werden können.</i
           >
@@ -232,7 +133,7 @@
         <td>0 %</td>
         <td>
           <i
-            >Die Leistungen entsprechen den Anforderungen nicht und selbst die
+          >Die Leistungen entsprechen den Anforderungen nicht und selbst die
             Grundkenntnisse sind so lückenhaft, dass die Mängel in absehbarer
             Zeit nicht behoben werden können.</i
           >
@@ -247,8 +148,49 @@
         href="https://de.wikipedia.org/wiki/Vorlage:Punktesystem_der_gymnasialen_Oberstufe"
         rel="norefer"
         target="_blank"
-        >de.wikipedia.org/wiki/Vorlage:Punktesystem_der_gymnasialen_Oberstufe</a
+      >de.wikipedia.org/wiki/Vorlage:Punktesystem_der_gymnasialen_Oberstufe</a
       >
     </p>
-  </body>
-</html>
+  </section>
+</template>
+
+<style scoped lang="scss">
+
+td {
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.green1,
+.green2,
+.yellow1,
+.yellow2,
+.orange,
+.red {
+  color: #000;
+}
+
+.green1 {
+  background-color: rgba(187 238 187 / 75%);
+}
+
+.green2 {
+  background-color: rgba(204 255 204 / 75%);
+}
+
+.yellow1 {
+  background-color: rgba(255 255 187 / 75%);
+}
+
+.yellow2 {
+  background-color: rgba(255 238 170 / 75%);
+}
+
+.orange {
+  background-color: rgba(255 221 170 / 75%);
+}
+
+.red {
+  background-color: rgba(255 170 170 / 75%);
+}
+</style>
