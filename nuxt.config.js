@@ -13,7 +13,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ defer: true, "data-domain": "m4rc3l.de", src: "https://plausible.m4rc3l.de/js/plausible.js" }]
+    script: [{ defer: true, async: true, "data-website-id": "f2cd72b7-fc15-46a6-9846-faad85b0afcb", src: "https://umami.m4rc3l.de/umami.js" }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
