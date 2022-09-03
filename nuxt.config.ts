@@ -57,6 +57,7 @@ export default defineNuxtConfig({
         async: true,
         "data-website-id": "f2cd72b7-fc15-46a6-9846-faad85b0afcb",
         "data-domains": "m4rc3l.de",
+        "data-host-url": "https://umami.m4rc3l.de",
         src: "/idk_how_to_name_this.js"
       },
       {
