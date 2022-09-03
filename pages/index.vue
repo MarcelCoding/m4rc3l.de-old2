@@ -47,7 +47,7 @@
       <ul>
         <li>
           write me an E-Mail to
-          <NuxtLink to="mailto:hello@m4rc3l.de"><code>hello@m4rc3l.de</code></NuxtLink>
+          <a class="email" data-user="hello"><code>[enable javascript]</code></a>
         </li>
         <li>
           write a message on Discord to
@@ -67,12 +67,12 @@
         <li>
           <b>PGP</b> -
           <NuxtLink to="/0x227D09E1.asc"><code>0x227D09E1.asc</code></NuxtLink>
-          (<code>hello@m4rc3l.de</code>)
+          (<code class="email" data-user="hello">[enable javascript]</code>)
         </li>
         <li>
           <b>PGP</b> -
           <NuxtLink to="/0xFAA965D4.asc"><code>0xFAA965D4.asc</code></NuxtLink>
-          (<code>security@m4rc3l.de</code>)
+          (<code class="email" data-user="hello">[enable javascript]</code>)
         </li>
       </ul>
     </section>
