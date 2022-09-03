@@ -11,10 +11,10 @@
     </ul>
     <p>
       Feeds are available as
-      <NuxtLink to="/blog.rss">blog.rss</NuxtLink>,
-      <NuxtLink to="/blog.atom">blog.atom</NuxtLink>
+      <NuxtLink to="/blog.rss" target="_blank">blog.rss</NuxtLink>,
+      <NuxtLink to="/blog.atom" target="_blank">blog.atom</NuxtLink>
       or
-      <NuxtLink to="/blog.json">blog.json</NuxtLink>.
+      <NuxtLink to="/blog.json" target="_blank">blog.json</NuxtLink>.
       Just add the appropriate file extension to the current URL.
     </p>
   </article>

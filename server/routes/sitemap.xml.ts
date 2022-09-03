@@ -13,6 +13,7 @@ export default defineEventHandler(async (event) => {
   sitemap.write({url: '/', changefreq: 'monthly'})
   sitemap.write({url: '/tools', changefreq: 'monthly'})
   sitemap.write({url: '/tools/noten', changefreq: 'monthly'})
+  sitemap.write({url: '/blog', changefreq: 'monthly'})
 
   for (const doc of docs) {
     sitemap.write({

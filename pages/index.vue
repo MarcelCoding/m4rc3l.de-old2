@@ -28,7 +28,7 @@
         in the recent time I also used some
         <NuxtLink to="https://nuxtjs.org" target="_blank">Nuxt</NuxtLink>.
         The site you are currently viewing is build using Nuxt. Feel free to have a look at its
-        <NuxtLink to="https://github.com/MarcelCoding/m4rc3l.de">GitHub Repository</NuxtLink>.
+        <NuxtLink to="https://github.com/MarcelCoding/m4rc3l.de" target="_blank">GitHub Repository</NuxtLink>.
       </p>
     </section>
 
@@ -62,16 +62,16 @@
       <ul>
         <li>
           <b>SSH</b> -
-          <NuxtLink to="/id_ed25519.pub"><code>id_ed25519.pub</code></NuxtLink>
+          <NuxtLink to="/id_ed25519.pub" target="_blank"><code>id_ed25519.pub</code></NuxtLink>
         </li>
         <li>
           <b>PGP</b> -
-          <NuxtLink to="/0x227D09E1.asc"><code>0x227D09E1.asc</code></NuxtLink>
+          <NuxtLink to="/0x227D09E1.asc" target="_blank"><code>0x227D09E1.asc</code></NuxtLink>
           (<code class="email" data-user="hello">[enable javascript]</code>)
         </li>
         <li>
           <b>PGP</b> -
-          <NuxtLink to="/0xFAA965D4.asc"><code>0xFAA965D4.asc</code></NuxtLink>
+          <NuxtLink to="/0xFAA965D4.asc" target="_blank"><code>0xFAA965D4.asc</code></NuxtLink>
           (<code class="email" data-user="hello">[enable javascript]</code>)
         </li>
       </ul>
