@@ -1,0 +1,156 @@
+body {
+  min-height: 100vh;
+}
+
+main:not(.wide), header, footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 701px) {
+    padding-left: 4rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.5rem 0 0.5rem;
+
+  &::before {
+    margin-right: 1rem;
+    color: $primary;
+  }
+
+  @media (min-width: 701px) {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      right: 100%;
+    }
+  }
+
+  a:not(.not) {
+    border: none;
+  }
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+
+  &::before {
+    content: '#';
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+
+  &::before {
+    content: '##';
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+
+  &::before {
+    content: '###';
+  }
+}
+
+a {
+  color: $thirdly;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+
+  &:not(.not) {
+    border-bottom: 0.15rem solid $primary;
+    transition: 150ms ease-in-out background-color, 150ms ease-in-out color;
+
+    &:hover {
+      background-color: $primary;
+      color: $second;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+
+  > li:before {
+    display: inline-block;
+    content: '-';
+    font-weight: 700;
+    color: $primary;
+    margin-left: -1rem;
+    width: 1rem;
+  }
+}
+
+code {
+  border-radius: 0.4rem;
+}
+
+pre {
+  // code blocks
+  code {
+    display: block;
+    padding: 0.8rem;
+    background-color: lighten($second, 3%);
+    width: 100%;
+  }
+
+  // inline code
+  :not(&) > code {
+    padding: 0 0.3rem;
+    background-color: lighten($second, 10%);
+  }
+}
+
+a {
+  > code {
+    transition: 150ms ease-in-out background-color;
+  }
+
+  &:hover > code {
+    background-color: $primary;
+  }
+}
+
+hr {
+  border: 0.1rem solid lighten($second, 10%);
+}
+
+
+.subtitle {
+  font-style: italic;
+}
+
+label {
+  input {
+    $color: darken($second, 5%);
+    border: 0.15rem solid $color;
+    outline: none;
+    background-color: $color;
+    color: $thirdly;
+    padding: 0.2rem 0.4rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    transition: 150ms border-color ease-in-out;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}

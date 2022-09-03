@@ -1,0 +1,23 @@
+$primary: #f16827;
+$second: #1f2638;
+$thirdly: #ecf0f1;
+
+@import "font";
+@import "scrollbar";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $second;
+  color: $thirdly;
+  margin: 0;
+}
+
+::selection {
+  background-color: $primary;
+  color: $second;
+}
+
+@import "typography";

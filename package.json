@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "packageManager": "pnpm@7",
+  "devDependencies": {
+    "@nuxt/content": "^2.0.1",
+    "@nuxt/image-edge": "^1.0.0-27703623.c823860",
+    "feed": "^4.2.2",
+    "nuxt": "^3.0.0-rc.9",
+    "sass": "^1.54.8",
+    "sitemap": "^7.1.1"
+  },
+  "dependencies": {
+    "@fontsource/dm-mono": "^4.5.9",
+    "@fontsource/dm-sans": "^4.5.8"
+  }
+}

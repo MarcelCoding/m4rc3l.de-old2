@@ -1,0 +1,14 @@
+* {
+  scrollbar-color: $primary $second;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 1rem;
+  }
+}
