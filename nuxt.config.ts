@@ -78,6 +78,7 @@ export default defineNuxtConfig({
         '/blog.atom',
         '/blog.json',
         '/blog.rss',
+        '/404.html',
       ],
     }
   },
