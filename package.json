@@ -8,15 +8,15 @@
   },
   "packageManager": "pnpm@7",
   "devDependencies": {
-    "@nuxt/content": "^2.1.1",
-    "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
+    "@nuxt/content": "^2.2.1",
+    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
     "feed": "^4.2.2",
-    "nuxt": "^3.0.0-rc.11",
-    "sass": "^1.55.0",
+    "nuxt": "^3.0.0-rc.13",
+    "sass": "^1.56.0",
     "sitemap": "^7.1.1"
   },
   "dependencies": {
-    "@fontsource/dm-mono": "^4.5.9",
-    "@fontsource/dm-sans": "^4.5.8"
+    "@fontsource/dm-mono": "^4.5.10",
+    "@fontsource/dm-sans": "^4.5.9"
   }
 }

@@ -5,7 +5,7 @@
     <p>
       Hi, my name is
       <NuxtLink to="avatar.png" target="_blank" class="not">
-        <NuxtImg alt=" " preload src="avatar.webp" title="My Avatar" width="30" height="30"/>
+        <nuxt-img alt=" " preload src="avatar.webp" title="My Avatar" width="30" height="30"/>
       </NuxtLink>
       Marcel. This is my website where you can find my personal profile and my
       blog.
